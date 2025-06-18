@@ -1,0 +1,30 @@
+<variant
+    name="debug"
+    package="com.example.android.wifirttscan"
+    minSdkVersion="28"
+    targetSdkVersion="34"
+    debuggable="true"
+    mergedManifest="build/intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml"
+    manifestMergeReport="build/outputs/logs/manifest-merger-debug-report.txt"
+    partialResultsDir="build/intermediates/android_test_lint_partial_results/debug/lintAnalyzeDebugAndroidTest/out">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+  </sourceProviders>
+  <testSourceProviders>
+    <sourceProvider
+        manifests="tests/AndroidManifest.xml"
+        javaDirectories="tests/src:src/androidTestDebug/java:tests/java:tests/kotlin:src/androidTestDebug/kotlin"
+        resDirectories="tests/res:src/androidTestDebug/res"
+        assetsDirectories="tests/assets:src/androidTestDebug/assets"
+        androidTest="true"/>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <artifact
+      type="INSTRUMENTATION_TEST"
+      applicationId="com.example.android.wifirttscan.test"
+      generatedResourceFolders="build/generated/res/resValues/androidTest/debug"
+      desugaredMethodsFiles="/Users/lukaszgintowt/.gradle/caches/8.9/transforms/72568988064e634ad894c29139cdf547/transformed/D8BackportedDesugaredMethods.txt">
+  </artifact>
+</variant>

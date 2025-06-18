@@ -1,0 +1,548 @@
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/java/com/example/android/wifirttscan/LocationPermissionRequestActivity.java:74: Error: Overriding method should call super.onRequestPermissionsResult [MissingSuperCall]
+    public void onRequestPermissionsResult(
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "MissingSuperCall":
+   Some methods, such as View#onDetachedFromWindow, require that you also call
+   the super implementation as part of your method.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:10: Warning: WRITE_EXTERNAL_STORAGE is deprecated (and is not granted) when targeting Android 13+. If you need to write to shared storage, use the MediaStore.createWriteRequest intent. [ScopedStorage]
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ScopedStorage":
+   Scoped storage is enforced on Android 10+ (or Android 11+ if using
+   requestLegacyExternalStorage). In particular, WRITE_EXTERNAL_STORAGE will
+   no longer provide write access to all files; it will provide the equivalent
+   of READ_EXTERNAL_STORAGE instead.
+
+   As of Android 13, if you need to query or interact with MediaStore or media
+   files on the shared storage, you should be using instead one or more new
+   storage permissions:
+   * android.permission.READ_MEDIA_IMAGES
+   * android.permission.READ_MEDIA_VIDEO
+   * android.permission.READ_MEDIA_AUDIO
+
+   and then add maxSdkVersion="33" to the older permission. See the developer
+   guide for how to do this:
+   https://developer.android.com/about/versions/13/behavior-changes-13#granula
+   r-media-permissions
+
+   The MANAGE_EXTERNAL_STORAGE permission can be used to manage all files, but
+   it is rarely necessary and most apps on Google Play are not allowed to use
+   it. Most apps should instead migrate to use scoped storage. To modify or
+   delete files, apps should request write access from the user as described
+   at https://goo.gle/android-mediastore-createwriterequest.
+
+   To learn more, read these resources: Play policy:
+   https://goo.gle/policy-storage-help Allowable use cases:
+   https://goo.gle/policy-storage-usecases
+
+   https://goo.gle/android-storage-usecases
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/java/com/example/android/wifirttscan/AccessPointRangingResultsActivity.java:256: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
+        editor.commit();
+               ~~~~~~~~
+
+   Explanation for issues of type "ApplySharedPref":
+   Consider using apply() instead of commit on shared preferences. Whereas
+   commit blocks and writes its data to persistent storage immediately, apply
+   will handle it in the background.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/java/com/example/android/wifirttscan/ScanResultComp.java:28: Warning: Reflective access to flags, which is not part of the public SDK and therefore likely to change in future Android releases [DiscouragedPrivateApi]
+            Field f = scanResult.getClass().getDeclaredField("flags");
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DiscouragedPrivateApi":
+   Usage of restricted non-SDK interface may throw an exception at runtime.
+   Accessing non-SDK methods or fields through reflection has a high
+   likelihood to break your app between versions, and is being restricted to
+   facilitate future app compatibility.
+
+   https://developer.android.com/preview/restrictions-non-sdk-interfaces
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:11: Warning: Attribute usesPermissionFlags is only used in API level 31 and higher (current min is 28) [UnusedAttribute]
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES" android:usesPermissionFlags="neverForLocation" />
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:7: Error: If you need access to FINE location, you must request both ACCESS_FINE_LOCATION and ACCESS_COARSE_LOCATION [CoarseFineLocation]
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "CoarseFineLocation":
+   If your app requires access to FINE location, on Android 12 and higher you
+   must now request both FINE and COARSE. Users will have the option to grant
+   only COARSE location. Ensure your app can work with just COARSE location.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:23: Warning: Redundant label can be removed [RedundantLabel]
+            android:label="@string/app_name"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RedundantLabel":
+   When an activity does not have a label attribute, it will use the one from
+   the application tag. Since the application has already specified the same
+   label, the label on this activity can be omitted.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/build.gradle:8: Warning: A newer version of com.android.tools.build:gradle than 8.4.0 is available: 8.10.1. (There is also a newer version of 8.4.𝑥 available, if upgrading to 8.10.1 is difficult: 8.4.2) [AndroidGradlePluginVersion]
+        classpath 'com.android.tools.build:gradle:8.4.0'
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/build.gradle:25: Warning: A newer version of androidx.room:room-runtime than 2.4.3 is available: 2.7.1 [GradleDependency]
+    implementation "androidx.room:room-runtime:${room_version}"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/build.gradle:27: Warning: A newer version of androidx.room:room-rxjava2 than 2.4.3 is available: 2.7.1 [GradleDependency]
+    implementation "androidx.room:room-rxjava2:$room_version"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/build.gradle:28: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/build.gradle:29: Warning: A newer version of androidx.recyclerview:recyclerview than 1.3.0 is available: 1.4.0 [GradleDependency]
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/build.gradle:30: Warning: A newer version of com.google.android.material:material than 1.9.0 is available: 1.12.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.9.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/build.gradle:31: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:70: Warning: Formatting %d followed by words ("seconds"): This should probably be a plural rather than a string [PluralsCandidate]
+    <string name="waiting_for_new_batch">Waiting %1$d seconds before starting the next batch</string>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "PluralsCandidate":
+   This lint check looks for potential errors in internationalization where
+   you have translated a message which involves a quantity and it looks like
+   other parts of the string may need grammatical changes.
+
+   For example, rather than something like this:
+     <string name="try_again">Try again in %d seconds.</string>
+   you should be using a plural:
+      <plurals name="try_again">
+           <item quantity="one">Try again in %d second</item>
+           <item quantity="other">Try again in %d seconds</item>
+       </plurals>
+   This will ensure that in other languages the right set of translations are
+   provided for the different quantity classes.
+
+   (This check depends on some heuristics, so it may not accurately determine
+   whether a string really should be a quantity. You can use tools:ignore to
+   filter out false positives.
+
+   https://developer.android.com/guide/topics/resources/string-resource.html#Plurals
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/java/com/example/android/wifirttscan/MainActivity.java:106: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        mAdapter.notifyDataSetChanged();
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/java/com/example/android/wifirttscan/MyAdapter.java:89: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged();
+        ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/drawable-v24: Warning: This folder configuration (v24) is unnecessary; minSdkVersion is 28. Merge all the resources in this folder into drawable. [ObsoleteSdkInt]
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 28. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values-v11: Warning: This folder configuration (v11) is unnecessary; minSdkVersion is 28. Merge all the resources in this folder into values. [ObsoleteSdkInt]
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values-v21: Warning: This folder configuration (v21) is unnecessary; minSdkVersion is 28. Merge all the resources in this folder into values. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_location_permission_request.xml:21: Warning: Possible overdraw: Root element paints background @color/colorSecondary with a theme that also paints a background (inferred theme is @style/CustomAppTheme) [Overdraw]
+    android:background="@color/colorSecondary"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/base-strings.xml:20: Warning: The resource R.string.intro_message appears to be unused [UnusedResources]
+    <string name="intro_message">
+            ~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/drawable/ic_round_network_wifi_24px.xml:14: Warning: The resource R.drawable.ic_round_network_wifi_24px appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/drawable-hdpi/ic_wifi.png: Warning: The resource R.drawable.ic_wifi appears to be unused [UnusedResources]
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:14: Warning: The resource R.string.action_settings appears to be unused [UnusedResources]
+    <string name="action_settings">Settings</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:24: Warning: The resource R.string.recycler_row_header_label_compatibility_announced appears to be unused [UnusedResources]
+    <string name="recycler_row_header_label_compatibility_announced">A</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:25: Warning: The resource R.string.recycler_row_header_label_compatibility_proved appears to be unused [UnusedResources]
+    <string name="recycler_row_header_label_compatibility_proved">V</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:26: Warning: The resource R.string.recycler_row_item_label_togglebutton_yes appears to be unused [UnusedResources]
+    <string name="recycler_row_item_label_togglebutton_yes">YES</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:27: Warning: The resource R.string.recycler_row_item_label_togglebutton_no appears to be unused [UnusedResources]
+    <string name="recycler_row_item_label_togglebutton_no">NO</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:36: Warning: The resource R.string.activity_access_point_ranging_results_requesting_default appears to be unused [UnusedResources]
+    <string name="activity_access_point_ranging_results_requesting_default">Requesting&#8230;</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:37: Warning: The resource R.string.range_label_activity_access_point_ranging_results appears to be unused [UnusedResources]
+    <string name="range_label_activity_access_point_ranging_results">Range (m):</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:38: Warning: The resource R.string.range_mean_label_activity_access_point_ranging_results appears to be unused [UnusedResources]
+    <string name="range_mean_label_activity_access_point_ranging_results">Range-mean (m):</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:39: Warning: The resource R.string.range_sd_label_activity_access_point_ranging_results appears to be unused [UnusedResources]
+    <string name="range_sd_label_activity_access_point_ranging_results">RangeSD (m):</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:40: Warning: The resource R.string.range_sd_mean_activity_access_point_ranging_results appears to be unused [UnusedResources]
+    <string name="range_sd_mean_activity_access_point_ranging_results">RangeSD-mean (m):</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:41: Warning: The resource R.string.rssi_label_activity_access_point_ranging_results appears to be unused [UnusedResources]
+    <string name="rssi_label_activity_access_point_ranging_results">RSSI (dBm):</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:42: Warning: The resource R.string.successes_in_burst_label_activity_access_point_ranging_results appears to be unused [UnusedResources]
+    <string name="successes_in_burst_label_activity_access_point_ranging_results">Successes in burst:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:43: Warning: The resource R.string.success_ratio_label_activity_access_point_ranging_results appears to be unused [UnusedResources]
+    <string name="success_ratio_label_activity_access_point_ranging_results">Success Ratio:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:62: Warning: The resource R.string.number_of_requests_label_activity_access_point_ranging_results appears to be unused [UnusedResources]
+    <string name="number_of_requests_label_activity_access_point_ranging_results">Number of requests:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:64: Warning: The resource R.string.textview appears to be unused [UnusedResources]
+    <string name="textview">TextView</string>
+            ~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:65: Warning: The resource R.string.word_yes appears to be unused [UnusedResources]
+    <string name="word_yes">Yes</string>
+            ~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/strings.xml:71: Warning: The resource R.string.SSID appears to be unused [UnusedResources]
+    <string name="SSID" />
+            ~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/styles.xml:25: Warning: The resource R.style.CustomAppTheme_NoActionBar appears to be unused [UnusedResources]
+    <style name="CustomAppTheme.NoActionBar">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/styles.xml:30: Warning: The resource R.style.CustomAppTheme_AppBarOverlay appears to be unused [UnusedResources]
+    <style name="CustomAppTheme.AppBarOverlay"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/styles.xml:33: Warning: The resource R.style.CustomAppTheme_PopupOverlay appears to be unused [UnusedResources]
+    <style name="CustomAppTheme.PopupOverlay"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-dimens.xml:21: Warning: The resource R.dimen.margin_tiny appears to be unused [UnusedResources]
+    <dimen name="margin_tiny">4dp</dimen>
+           ~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-dimens.xml:22: Warning: The resource R.dimen.margin_small appears to be unused [UnusedResources]
+    <dimen name="margin_small">8dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-dimens.xml:23: Warning: The resource R.dimen.margin_medium appears to be unused [UnusedResources]
+    <dimen name="margin_medium">16dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-dimens.xml:24: Warning: The resource R.dimen.margin_large appears to be unused [UnusedResources]
+    <dimen name="margin_large">32dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-dimens.xml:25: Warning: The resource R.dimen.margin_huge appears to be unused [UnusedResources]
+    <dimen name="margin_huge">64dp</dimen>
+           ~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-dimens.xml:29: Warning: The resource R.dimen.horizontal_page_margin appears to be unused [UnusedResources]
+    <dimen name="horizontal_page_margin">@dimen/margin_medium</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-dimens.xml:30: Warning: The resource R.dimen.vertical_page_margin appears to be unused [UnusedResources]
+    <dimen name="vertical_page_margin">@dimen/margin_medium</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-styles.xml:21: Warning: The resource R.style.Theme_Base appears to be unused [UnusedResources]
+    <style name="Theme.Base" parent="android:Theme.Light" />
+           ~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-styles.xml:23: Warning: The resource R.style.Theme_Sample appears to be unused [UnusedResources]
+    <style name="Theme.Sample" parent="Theme.Base" />
+           ~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-styles.xml:25: Warning: The resource R.style.AppTheme appears to be unused [UnusedResources]
+    <style name="AppTheme" parent="Theme.Sample" />
+           ~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-styles.xml:28: Warning: The resource R.style.Widget appears to be unused [UnusedResources]
+    <style name="Widget" />
+           ~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-styles.xml:30: Warning: The resource R.style.Widget_SampleMessage appears to be unused [UnusedResources]
+    <style name="Widget.SampleMessage">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/values/template-styles.xml:35: Warning: The resource R.style.Widget_SampleMessageTile appears to be unused [UnusedResources]
+    <style name="Widget.SampleMessageTile">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/drawable-hdpi/tile.9.png: Warning: The resource R.drawable.tile appears to be unused [UnusedResources]
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/mipmap-anydpi-v26/ic_launcher.xml:14: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml:14: Warning: The application adaptive roundIcon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/drawable-mdpi: Warning: Missing the following drawables in drawable-mdpi: tile.9.png (found in drawable-hdpi) [IconDensities]
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/drawable-xhdpi: Warning: Missing the following drawables in drawable-xhdpi: tile.9.png (found in drawable-hdpi) [IconDensities]
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/drawable-xxhdpi: Warning: Missing the following drawables in drawable-xxhdpi: tile.9.png (found in drawable-hdpi) [IconDensities]
+
+   Explanation for issues of type "IconDensities":
+   Icons will look best if a custom version is provided for each of the major
+   screen density classes (low, medium, high, extra high). This lint check
+   identifies icons which do not have complete coverage across the densities.
+
+   Low density is not really used much anymore, so this check ignores the ldpi
+   density. To force lint to include it, set the environment variable
+   ANDROID_LINT_INCLUDE_LDPI=true. For more information on current density
+   usage, see https://developer.android.com/about/dashboards
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:345: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:354: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+
+   Explanation for issues of type "ButtonStyle":
+   Button bars typically use a borderless style for the buttons. Set the
+   style="?android:attr/buttonBarButtonStyle" attribute on each of the
+   buttons, and set style="?android:attr/buttonBarStyle" on the parent layout
+
+   https://d.android.com/r/studio-ui/designer/material/dialogs
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:195: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:223: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:251: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:279: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:307: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_location_permission_request.xml:24: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/recycler_row_header.xml:39: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/recycler_row_header.xml:46: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:195: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:223: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:251: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:279: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:307: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "LabelFor":
+   Editable text fields should provide an android:hint or, provided your
+   minSdkVersion is at least 17, they may be referenced by a view with a
+   android:labelFor attribute.
+
+   When using android:labelFor, be sure to provide an android:text or an
+   android:contentDescription.
+
+   If your view is labeled but by a label in a different layout which includes
+   this one, just suppress this warning from lint.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/java/com/example/android/wifirttscan/AccessPointRangingResultsActivity.java:165: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        mSampleSizeLabel.setText("#Samples");
+                                 ~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/java/com/example/android/wifirttscan/AccessPointRangingResultsActivity.java:166: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        mBatchSizeLabel.setText("#Batches");
+                                ~~~~~~~~~~
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/java/com/example/android/wifirttscan/MyAdapter.java:128: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            viewHolderItem.mFrequencyBandTextView.setText(scanResultComp.getFrequencyBand() + "(" + scanResultComp.getChannelBandWidth() + ")");
+                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:335: Warning: Hardcoded string "Status: ", should use @string resource [HardcodedText]
+        android:text="Status: "/>
+        ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:30: Error: Inconsistent alignment specification between textAlignment and gravity attributes: was center_vertical, expected center_horizontal [RtlCompat]
+        android:textAlignment="center"
+                               ~~~~~~
+    /Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:28: Incompatible direction here
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:42: Error: Inconsistent alignment specification between textAlignment and gravity attributes: was center_vertical, expected center_horizontal [RtlCompat]
+        android:textAlignment="center"
+                               ~~~~~~
+    /Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/activity_access_point_ranging_results.xml:41: Incompatible direction here
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/recycler_row_item.xml:36: Error: Inconsistent alignment specification between textAlignment and gravity attributes: was center_vertical, expected center_horizontal [RtlCompat]
+            android:textAlignment="center"
+                                   ~~~~~~
+    /Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/recycler_row_item.xml:35: Incompatible direction here
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/recycler_row_item.xml:46: Error: Inconsistent alignment specification between textAlignment and gravity attributes: was center_vertical, expected center_horizontal [RtlCompat]
+            android:textAlignment="center"
+                                   ~~~~~~
+    /Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/recycler_row_item.xml:45: Incompatible direction here
+/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/recycler_row_item.xml:55: Error: Inconsistent alignment specification between textAlignment and gravity attributes: was center_vertical, expected center_horizontal [RtlCompat]
+            android:textAlignment="center"
+                                   ~~~~~~
+    /Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/res/layout/recycler_row_item.xml:54: Incompatible direction here
+
+   Explanation for issues of type "RtlCompat":
+   API 17 adds a textAlignment attribute to specify text alignment. However,
+   if you are supporting older versions than API 17, you must also specify a
+   gravity or layout_gravity attribute, since older platforms will ignore the
+   textAlignment attribute.
+
+7 errors, 81 warnings

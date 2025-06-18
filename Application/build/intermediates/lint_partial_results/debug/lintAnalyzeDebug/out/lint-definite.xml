@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.4.0" type="incidents">
+
+    <incident
+        id="RedundantLabel"
+        severity="warning"
+        message="Redundant label can be removed">
+        <fix-attribute
+            description="Delete label"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="label"/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="23"
+            column="13"
+            startOffset="1104"
+            endLine="23"
+            endColumn="45"
+            endOffset="1136"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v24`) is unnecessary; `minSdkVersion` is 28. Merge all the resources in this folder into `drawable`.">
+        <fix-data file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/drawable-v24" folderName="drawable" requiresApi="28"/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/drawable-v24"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="195"
+            column="6"
+            startOffset="9703"
+            endLine="195"
+            endColumn="14"
+            endOffset="9711"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="223"
+            column="6"
+            startOffset="11281"
+            endLine="223"
+            endColumn="14"
+            endOffset="11289"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="251"
+            column="6"
+            startOffset="12876"
+            endLine="251"
+            endColumn="14"
+            endOffset="12884"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="279"
+            column="6"
+            startOffset="14368"
+            endLine="279"
+            endColumn="14"
+            endOffset="14376"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="307"
+            column="6"
+            startOffset="15985"
+            endLine="307"
+            endColumn="14"
+            endOffset="15993"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Status: &quot;, should use `@string` resource">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="335"
+            column="9"
+            startOffset="17598"
+            endLine="335"
+            endColumn="32"
+            endOffset="17621"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+                    startOffset="17629"
+                    endOffset="18925"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+                    startOffset="17921"
+                    endOffset="18342"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+                    startOffset="18352"
+                    endOffset="18904"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="345"
+            column="10"
+            startOffset="17922"
+            endLine="345"
+            endColumn="16"
+            endOffset="17928"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+                    startOffset="17629"
+                    endOffset="18925"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+                    startOffset="17921"
+                    endOffset="18342"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+                    startOffset="18352"
+                    endOffset="18904"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="354"
+            column="10"
+            startOffset="18353"
+            endLine="354"
+            endColumn="16"
+            endOffset="18359"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_location_permission_request.xml"
+            line="24"
+            column="6"
+            startOffset="1075"
+            endLine="24"
+            endColumn="15"
+            endOffset="1084"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/recycler_row_header.xml"
+            line="39"
+            column="6"
+            startOffset="1406"
+            endLine="39"
+            endColumn="15"
+            endOffset="1415"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/recycler_row_header.xml"
+            line="46"
+            column="6"
+            startOffset="1679"
+            endLine="46"
+            endColumn="15"
+            endOffset="1688"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 28. Merge all the resources in this folder into `mipmap-anydpi`.">
+        <fix-data file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26" folderName="mipmap-anydpi" requiresApi="28"/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26"/>
+    </incident>
+
+    <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive icon is missing a monochrome tag">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher.xml"
+            line="14"
+            column="1"
+            startOffset="641"
+            endLine="17"
+            endColumn="17"
+            endOffset="874"/>
+    </incident>
+
+    <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive roundIcon is missing a monochrome tag">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher_round.xml"
+            line="14"
+            column="1"
+            startOffset="641"
+            endLine="17"
+            endColumn="17"
+            endOffset="874"/>
+    </incident>
+
+    <incident
+        id="PluralsCandidate"
+        severity="warning"
+        message="Formatting %d followed by words (&quot;seconds&quot;): This should probably be a plural rather than a string">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="70"
+            column="5"
+            startOffset="4734"
+            endLine="70"
+            endColumn="102"
+            endOffset="4831"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v11`) is unnecessary; `minSdkVersion` is 28. Merge all the resources in this folder into `values`.">
+        <fix-data file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/values-v11" folderName="values" requiresApi="28"/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/values-v11"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v21`) is unnecessary; `minSdkVersion` is 28. Merge all the resources in this folder into `values`.">
+        <fix-data file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/values-v21" folderName="values" requiresApi="28"/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/values-v21"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/android/wifirttscan/AccessPointRangingResultsActivity.java"
+            line="165"
+            column="34"
+            startOffset="6309"
+            endLine="165"
+            endColumn="44"
+            endOffset="6319"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/android/wifirttscan/AccessPointRangingResultsActivity.java"
+            line="166"
+            column="33"
+            startOffset="6354"
+            endLine="166"
+            endColumn="43"
+            endOffset="6364"/>
+    </incident>
+
+    <incident
+        id="ApplySharedPref"
+        severity="warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <fix-replace
+            description="Replace commit() with apply()"
+            oldPattern="(commit)\s*\("
+            replacement="apply"
+            priority="0"/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/android/wifirttscan/AccessPointRangingResultsActivity.java"
+            line="256"
+            column="16"
+            startOffset="10218"
+            endLine="256"
+            endColumn="24"
+            endOffset="10226"/>
+    </incident>
+
+    <incident
+        id="MissingSuperCall"
+        severity="error"
+        message="Overriding method should call `super.onRequestPermissionsResult`">
+        <fix-data/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/android/wifirttscan/LocationPermissionRequestActivity.java"
+            line="74"
+            column="17"
+            startOffset="2750"
+            endLine="74"
+            endColumn="43"
+            endOffset="2776"/>
+    </incident>
+
+    <incident
+        id="NotifyDataSetChanged"
+        severity="warning"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/android/wifirttscan/MainActivity.java"
+            line="106"
+            column="9"
+            startOffset="3789"
+            endLine="106"
+            endColumn="40"
+            endOffset="3820"/>
+    </incident>
+
+    <incident
+        id="NotifyDataSetChanged"
+        severity="warning"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/android/wifirttscan/MyAdapter.java"
+            line="89"
+            column="9"
+            startOffset="3189"
+            endLine="89"
+            endColumn="31"
+            endOffset="3211"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/android/wifirttscan/MyAdapter.java"
+            line="128"
+            column="59"
+            startOffset="4813"
+            endLine="128"
+            endColumn="143"
+            endOffset="4897"/>
+    </incident>
+
+    <incident
+        id="DiscouragedPrivateApi"
+        severity="warning"
+        message="Reflective access to flags, which is not part of the public SDK and therefore likely to change in future Android releases">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/android/wifirttscan/ScanResultComp.java"
+            line="28"
+            column="23"
+            startOffset="1029"
+            endLine="28"
+            endColumn="70"
+            endOffset="1076"/>
+    </incident>
+
+    <incident
+        id="AndroidGradlePluginVersion"
+        severity="warning"
+        message="A newer version of com.android.tools.build:gradle than 8.4.0 is available: 8.10.1. (There is also a newer version of 8.4.𝑥 available, if upgrading to 8.10.1 is difficult: 8.4.2)">
+        <fix-alternatives>
+            <fix-replace
+                description="Change to 8.10.1"
+                family="Update versions"
+                oldString="8.4.0"
+                replacement="8.10.1"
+                priority="0"/>
+            <fix-replace
+                description="Change to 8.4.2"
+                family="Update versions"
+                robot="true"
+                independent="true"
+                oldString="8.4.0"
+                replacement="8.4.2"
+                priority="0"/>
+        </fix-alternatives>
+        <location
+            file="${:Application*projectDir}/build.gradle"
+            line="8"
+            column="19"
+            startOffset="117"
+            endLine="8"
+            endColumn="57"
+            endOffset="155"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-runtime than 2.4.3 is available: 2.7.1">
+        <location
+            file="${:Application*projectDir}/build.gradle"
+            line="25"
+            column="20"
+            startOffset="431"
+            endLine="25"
+            endColumn="64"
+            endOffset="475"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-rxjava2 than 2.4.3 is available: 2.7.1">
+        <location
+            file="${:Application*projectDir}/build.gradle"
+            line="27"
+            column="20"
+            startOffset="565"
+            endLine="27"
+            endColumn="62"
+            endOffset="607"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1">
+        <fix-replace
+            description="Change to 1.7.1"
+            family="Update versions"
+            oldString="1.6.1"
+            replacement="1.7.1"
+            priority="0"/>
+        <location
+            file="${:Application*projectDir}/build.gradle"
+            line="28"
+            column="20"
+            startOffset="627"
+            endLine="28"
+            endColumn="56"
+            endOffset="663"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.recyclerview:recyclerview than 1.3.0 is available: 1.4.0">
+        <fix-replace
+            description="Change to 1.4.0"
+            family="Update versions"
+            oldString="1.3.0"
+            replacement="1.4.0"
+            priority="0"/>
+        <location
+            file="${:Application*projectDir}/build.gradle"
+            line="29"
+            column="20"
+            startOffset="683"
+            endLine="29"
+            endColumn="62"
+            endOffset="725"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.9.0 is available: 1.12.0">
+        <fix-replace
+            description="Change to 1.12.0"
+            family="Update versions"
+            oldString="1.9.0"
+            replacement="1.12.0"
+            priority="0"/>
+        <location
+            file="${:Application*projectDir}/build.gradle"
+            line="30"
+            column="20"
+            startOffset="745"
+            endLine="30"
+            endColumn="64"
+            endOffset="789"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1">
+        <fix-replace
+            description="Change to 2.2.1"
+            family="Update versions"
+            oldString="2.1.4"
+            replacement="2.2.1"
+            priority="0"/>
+        <location
+            file="${:Application*projectDir}/build.gradle"
+            line="31"
+            column="20"
+            startOffset="809"
+            endLine="31"
+            endColumn="70"
+            endOffset="859"/>
+    </incident>
+
+    <incident
+        id="IconDensities"
+        severity="warning"
+        message="Missing the following drawables in `drawable-mdpi`: tile.9.png (found in drawable-hdpi)">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/drawable-mdpi"/>
+    </incident>
+
+    <incident
+        id="IconDensities"
+        severity="warning"
+        message="Missing the following drawables in `drawable-xhdpi`: tile.9.png (found in drawable-hdpi)">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/drawable-xhdpi"/>
+    </incident>
+
+    <incident
+        id="IconDensities"
+        severity="warning"
+        message="Missing the following drawables in `drawable-xxhdpi`: tile.9.png (found in drawable-hdpi)">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/drawable-xxhdpi"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/colorSecondary` with a theme that also paints a background (inferred theme is `@style/CustomAppTheme`)">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_location_permission_request.xml"
+            line="21"
+            column="5"
+            startOffset="984"
+            endLine="21"
+            endColumn="47"
+            endOffset="1026"/>
+    </incident>
+
+</incidents>

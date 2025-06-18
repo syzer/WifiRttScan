@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/drawable-hdpi_tile.9.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/drawable-hdpi/tile.9.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/drawable_ic_round_network_wifi_24px.xml.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/drawable/ic_round_network_wifi_24px.xml"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/layout_recycler_row_item.xml.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/layout/recycler_row_item.xml"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/layout_activity_access_point_ranging_results.xml.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/layout/activity_access_point_ranging_results.xml"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/drawable_ic_round_network_wifi_white_24px.xml.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/drawable/ic_round_network_wifi_white_24px.xml"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/drawable-xhdpi_ic_wifi.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/drawable-xhdpi/ic_wifi.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/layout_activity_main.xml.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/anim_blink.xml.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/anim/blink.xml"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/layout_recycler_row_header.xml.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/layout/recycler_row_header.xml"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/drawable-xxhdpi_ic_wifi.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/drawable-xxhdpi/ic_wifi.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/drawable-hdpi_ic_wifi.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/drawable-hdpi/ic_wifi.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/drawable-mdpi_ic_wifi.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/drawable-mdpi/ic_wifi.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.android.wifirttscan.Application-release-33:/layout_activity_location_permission_request.xml.flat",
+        "source": "com.example.android.wifirttscan.Application-main-35:/layout/activity_location_permission_request.xml"
+    }
+]

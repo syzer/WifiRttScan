@@ -1,0 +1,141 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.android.wifirttscan"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="28"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-feature android:name="android.hardware.wifi.rtt" /> <!-- Permissions required for Wifi RTT. -->
+11-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:6:5-62
+11-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:6:19-59
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:7:5-79
+12-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:7:22-76
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:8:5-76
+13-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:8:22-73
+14    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+14-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:9:5-76
+14-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:9:22-73
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:10:5-81
+15-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:10:22-78
+16    <uses-permission
+16-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:11:5-125
+17        android:name="android.permission.NEARBY_WIFI_DEVICES"
+17-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:11:22-75
+18        android:usesPermissionFlags="neverForLocation" />
+18-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:11:76-122
+19
+20    <permission
+20-->[androidx.core:core:1.9.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/5d05822affbc926a6ebdbc0b756426ea/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+21        android:name="com.example.android.wifirttscan.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.9.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/5d05822affbc926a6ebdbc0b756426ea/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.9.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/5d05822affbc926a6ebdbc0b756426ea/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="com.example.android.wifirttscan.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+24-->[androidx.core:core:1.9.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/5d05822affbc926a6ebdbc0b756426ea/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.9.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/5d05822affbc926a6ebdbc0b756426ea/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+25
+26    <application
+26-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:13:5-44:19
+27        android:allowBackup="true"
+27-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:14:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.9.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/5d05822affbc926a6ebdbc0b756426ea/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+29        android:extractNativeLibs="false"
+30        android:icon="@mipmap/ic_launcher"
+30-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:15:9-43
+31        android:installLocation="preferExternal"
+31-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:16:9-49
+32        android:label="@string/app_name"
+32-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:17:9-41
+33        android:roundIcon="@mipmap/ic_launcher_round"
+33-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:18:9-54
+34        android:supportsRtl="true"
+34-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:19:9-35
+35        android:theme="@style/CustomAppTheme" >
+35-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:20:9-46
+36        <activity
+36-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:21:9-31:20
+37            android:name="com.example.android.wifirttscan.MainActivity"
+37-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:22:13-41
+38            android:exported="true"
+38-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:25:13-36
+39            android:label="@string/app_name"
+39-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:23:13-45
+40            android:theme="@style/CustomAppTheme" >
+40-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:24:13-50
+41            <intent-filter>
+41-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:26:13-30:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:27:17-69
+42-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:27:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:29:17-77
+44-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:29:27-74
+45            </intent-filter>
+46        </activity>
+47        <activity
+47-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:32:9-37:49
+48            android:name="com.example.android.wifirttscan.LocationPermissionRequestActivity"
+48-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:33:13-62
+49            android:exported="false"
+49-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:37:13-37
+50            android:label="@string/title_activity_location_permission_request"
+50-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:34:13-79
+51            android:parentActivityName="com.example.android.wifirttscan.MainActivity"
+51-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:35:13-55
+52            android:theme="@style/CustomAppTheme" />
+52-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:36:13-50
+53        <activity
+53-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:38:9-43:49
+54            android:name="com.example.android.wifirttscan.AccessPointRangingResultsActivity"
+54-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:39:13-62
+55            android:exported="false"
+55-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:43:13-37
+56            android:label="@string/title_activity_access_point_ranging_results"
+56-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:40:13-80
+57            android:parentActivityName="com.example.android.wifirttscan.MainActivity"
+57-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:41:13-55
+58            android:theme="@style/CustomAppTheme" />
+58-->/Users/lukaszgintowt/endress/WifiRttScan/Application/src/main/AndroidManifest.xml:42:13-50
+59
+60        <service
+60-->[androidx.room:room-runtime:2.4.3] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/614fed3376a2f9dd1e07fbe1e3e35434/transformed/room-runtime-2.4.3/AndroidManifest.xml:25:9-28:40
+61            android:name="androidx.room.MultiInstanceInvalidationService"
+61-->[androidx.room:room-runtime:2.4.3] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/614fed3376a2f9dd1e07fbe1e3e35434/transformed/room-runtime-2.4.3/AndroidManifest.xml:26:13-74
+62            android:directBootAware="true"
+62-->[androidx.room:room-runtime:2.4.3] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/614fed3376a2f9dd1e07fbe1e3e35434/transformed/room-runtime-2.4.3/AndroidManifest.xml:27:13-43
+63            android:exported="false" />
+63-->[androidx.room:room-runtime:2.4.3] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/614fed3376a2f9dd1e07fbe1e3e35434/transformed/room-runtime-2.4.3/AndroidManifest.xml:28:13-37
+64
+65        <provider
+65-->[androidx.emoji2:emoji2:1.2.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/520c43ed523b02f5247dcbde94600f34/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+66            android:name="androidx.startup.InitializationProvider"
+66-->[androidx.emoji2:emoji2:1.2.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/520c43ed523b02f5247dcbde94600f34/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+67            android:authorities="com.example.android.wifirttscan.androidx-startup"
+67-->[androidx.emoji2:emoji2:1.2.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/520c43ed523b02f5247dcbde94600f34/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+68            android:exported="false" >
+68-->[androidx.emoji2:emoji2:1.2.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/520c43ed523b02f5247dcbde94600f34/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+69            <meta-data
+69-->[androidx.emoji2:emoji2:1.2.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/520c43ed523b02f5247dcbde94600f34/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+70                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+70-->[androidx.emoji2:emoji2:1.2.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/520c43ed523b02f5247dcbde94600f34/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+71                android:value="androidx.startup" />
+71-->[androidx.emoji2:emoji2:1.2.0] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/520c43ed523b02f5247dcbde94600f34/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+72            <meta-data
+72-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/e7bc69574f9c08b55a8e7bd1fe09c7c0/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+73                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+73-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/e7bc69574f9c08b55a8e7bd1fe09c7c0/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+74                android:value="androidx.startup" />
+74-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/lukaszgintowt/.gradle/caches/8.9/transforms/e7bc69574f9c08b55a8e7bd1fe09c7c0/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+75        </provider>
+76    </application>
+77
+78</manifest>

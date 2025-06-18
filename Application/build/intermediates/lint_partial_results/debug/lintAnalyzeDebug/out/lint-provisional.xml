@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.4.0" type="conditional_incidents">
+
+    <incident
+        id="ScopedStorage"
+        severity="warning"
+        message="">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="10"
+            column="36"
+            startOffset="540"
+            endLine="10"
+            endColumn="77"
+            endOffset="581"/>
+        <map>
+            <entry
+                name="maxSdkVersion"
+                int="2147483647"/>
+            <entry
+                name="read"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffff8000000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="11"
+            column="76"
+            startOffset="661"
+            endLine="11"
+            endColumn="122"
+            endOffset="707"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffff8000000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `usesPermissionFlags` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlCompat"
+        severity="error"
+        message="Inconsistent alignment specification between `textAlignment` and `gravity` attributes: was `center_vertical`, expected `center_horizontal`">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="30"
+            column="32"
+            startOffset="1416"
+            endLine="30"
+            endColumn="38"
+            endOffset="1422"/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="28"
+            column="26"
+            startOffset="1342"
+            endLine="28"
+            endColumn="41"
+            endOffset="1357"
+            message="Incompatible direction here"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlCompat"
+        severity="error"
+        message="Inconsistent alignment specification between `textAlignment` and `gravity` attributes: was `center_vertical`, expected `center_horizontal`">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="42"
+            column="32"
+            startOffset="2008"
+            endLine="42"
+            endColumn="38"
+            endOffset="2014"/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="41"
+            column="26"
+            startOffset="1960"
+            endLine="41"
+            endColumn="41"
+            endOffset="1975"
+            message="Incompatible direction here"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="351"
+            column="13"
+            startOffset="18218"
+            endLine="351"
+            endColumn="49"
+            endOffset="18254"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="362"
+            column="13"
+            startOffset="18780"
+            endLine="362"
+            endColumn="49"
+            endOffset="18816"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LabelFor"
+        severity="warning"
+        message="">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="195"
+            column="6"
+            startOffset="9703"
+            endLine="195"
+            endColumn="14"
+            endOffset="9711"/>
+        <map>
+            <entry
+                name="hint"
+                boolean="false"/>
+            <entry
+                name="label"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LabelFor"
+        severity="warning"
+        message="">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="223"
+            column="6"
+            startOffset="11281"
+            endLine="223"
+            endColumn="14"
+            endOffset="11289"/>
+        <map>
+            <entry
+                name="hint"
+                boolean="false"/>
+            <entry
+                name="label"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LabelFor"
+        severity="warning"
+        message="">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="251"
+            column="6"
+            startOffset="12876"
+            endLine="251"
+            endColumn="14"
+            endOffset="12884"/>
+        <map>
+            <entry
+                name="hint"
+                boolean="false"/>
+            <entry
+                name="label"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LabelFor"
+        severity="warning"
+        message="">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="279"
+            column="6"
+            startOffset="14368"
+            endLine="279"
+            endColumn="14"
+            endOffset="14376"/>
+        <map>
+            <entry
+                name="hint"
+                boolean="false"/>
+            <entry
+                name="label"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LabelFor"
+        severity="warning"
+        message="">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_access_point_ranging_results.xml"
+            line="307"
+            column="6"
+            startOffset="15985"
+            endLine="307"
+            endColumn="14"
+            endOffset="15993"/>
+        <map>
+            <entry
+                name="hint"
+                boolean="false"/>
+            <entry
+                name="label"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_location_permission_request.xml"
+            line="79"
+            column="9"
+            startOffset="3497"
+            endLine="79"
+            endColumn="55"
+            endOffset="3543"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_location_permission_request.xml"
+            line="93"
+            column="9"
+            startOffset="4114"
+            endLine="93"
+            endColumn="58"
+            endOffset="4163"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="64"
+            column="9"
+            startOffset="2753"
+            endLine="64"
+            endColumn="61"
+            endOffset="2805"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlCompat"
+        severity="error"
+        message="Inconsistent alignment specification between `textAlignment` and `gravity` attributes: was `center_vertical`, expected `center_horizontal`">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/recycler_row_item.xml"
+            line="36"
+            column="36"
+            startOffset="1495"
+            endLine="36"
+            endColumn="42"
+            endOffset="1501"/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/recycler_row_item.xml"
+            line="35"
+            column="30"
+            startOffset="1443"
+            endLine="35"
+            endColumn="45"
+            endOffset="1458"
+            message="Incompatible direction here"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlCompat"
+        severity="error"
+        message="Inconsistent alignment specification between `textAlignment` and `gravity` attributes: was `center_vertical`, expected `center_horizontal`">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/recycler_row_item.xml"
+            line="46"
+            column="36"
+            startOffset="1927"
+            endLine="46"
+            endColumn="42"
+            endOffset="1933"/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/recycler_row_item.xml"
+            line="45"
+            column="30"
+            startOffset="1875"
+            endLine="45"
+            endColumn="45"
+            endOffset="1890"
+            message="Incompatible direction here"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlCompat"
+        severity="error"
+        message="Inconsistent alignment specification between `textAlignment` and `gravity` attributes: was `center_vertical`, expected `center_horizontal`">
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/recycler_row_item.xml"
+            line="55"
+            column="36"
+            startOffset="2396"
+            endLine="55"
+            endColumn="42"
+            endOffset="2402"/>
+        <location
+            file="${:Application*debug*MAIN*sourceProvider*0*resDir*0}/layout/recycler_row_item.xml"
+            line="54"
+            column="30"
+            startOffset="2344"
+            endLine="54"
+            endColumn="45"
+            endOffset="2359"
+            message="Incompatible direction here"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+</incidents>

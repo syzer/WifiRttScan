@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2018 Google Inc.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/recycler_row_padding"
+    android:paddingBottom="@dimen/recycler_row_padding">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="6">
+        <TextView
+            android:id="@+id/ssid_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/recycler_row_item_text_size" />
+
+        <TextView
+            android:id="@+id/bssid_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@+id/ssid_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/ssid_text_view"
+            android:textSize="@dimen/recycler_row_item_text_size" />
+        <TextView
+            android:id="@+id/frequency_band_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@+id/bssid_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/bssid_text_view"
+            android:textSize="@dimen/recycler_row_item_text_size" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <CheckBox
+        android:id="@+id/is_announced"
+        android:layout_width="@dimen/activity_main_checkbox_width"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:enabled="false"
+        android:buttonTint="@color/colorAccent"
+        android:checked="true" />
+
+    <CheckBox
+        android:id="@+id/has_been_tested"
+        android:layout_width="@dimen/activity_main_checkbox_width"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:enabled="false"
+        android:buttonTint="@color/colorAccent"
+        android:checked="true" />
+
+</LinearLayout>

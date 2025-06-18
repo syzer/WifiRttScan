@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="/Users/lukaszgintowt/endress/WifiRttScan/Application"
+    name=":Application"
+    type="APP"
+    maven="WifiRttScan:Application:unspecified"
+    agpVersion="8.4.0"
+    buildFolder="build"
+    bootClassPath="/Users/lukaszgintowt/Library/Android/sdk/platforms/android-34/android.jar:/Users/lukaszgintowt/Library/Android/sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>
